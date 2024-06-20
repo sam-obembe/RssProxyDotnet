@@ -12,6 +12,3 @@ WORKDIR /api
 RUN ls -a
 COPY --from=build /rssProxy/api/* .
 CMD ["./RssProxyDotnet"]
-
-
-

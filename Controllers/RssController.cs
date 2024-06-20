@@ -30,9 +30,8 @@ public class RssController : ControllerBase
         
         using var reader = XmlReader.Create(decodedUrl);
         var feed = SyndicationFeed.Load(reader);
-
         _memoryCache.Set(decodedUrl, feed);
-        return feed;
         
+        return feed;
     }
 }
